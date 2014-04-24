@@ -1,4 +1,3 @@
-var parseDataSheet = require('./lib/parseDataSheet');
 var express        = require('express');
 var app            = express();
 
@@ -6,22 +5,7 @@ var eventsData = require('./data/eventsData');
 var timelineData = require('./data/timelineData');
 var tagsData = require('./data/tagsData');
 
-var v = '1.0'
-
-var options = {
-    host: 'spreadsheets.google.com',
-    port: 443,
-    path: '/feeds/list/1enjDLyGzghZt2p27ZG3kaEt2bRxdGzpQ9bEvKmombr4/996901514/public/values?v=3.0&alt=json',
-    method: 'GET',
-    headers: {
-        'Content-Type': 'application/json'
-    }
-}
-
-// parseDataSheet.getJSON(options, function (statusCode, result) {
-//     console.log("result: " + statusCode);
-//     console.log("data " + JSON.stringify(result));
-// });
+var v = '1.0';
 
 app.all('/*', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
