@@ -1,22 +1,81 @@
 SunflowerDocumentaryAPI
 =============
 
-The Sunflower Documentary Data API.
+The Sunflower Documentary [Data API](http://sunflower-documentary-api.herokuapp.com/api/1.0/events).
 
-## Usage
+## API Usage
 
+- Get all events
+`api/1.0/events`
+- Get timeline
+`api/1.0/timeline`
+- Get all tags
+`api/1.0/tags`
 
 ## Data format
 
+- Timeline
+```
+[
+    {
+        "event_id": 1,
+        "focus": 1,
+        "title": "兩岸經貿如何影響民主？",
+        "date": {
+             "yyyy" : 2014, "mm" : 3, "dd" : 21,
+             "hh" : 0, "ii" :0, "ss" : 0 }
+    },
+]
+```
+
+- Event
+```
+[
+    {
+        "event_id": 1,
+        "title": "兩岸經貿如何影響民主？",
+        "description": "逐字在此",
+        "site": "濟南路",
+        "thumbnail": ["img/event/1.jpg"],
+        "media": [
+        "https://www.youtube.com/watch?v=UKbOavrerNQ&t=53m37s",
+        "https://www.youtube.com/watch?v=UKbOavrerNQ&t=53m36s"
+        ],
+        "tag": [
+            { "id": 1, name": "街頭民主教室" },
+            { "id": 2, name": "太陽花" },...
+        ],
+        "hackpad": "https://318.hackpad.com/--F0W0Fnhkakl",
+        "date": {
+             "yyyy" : 2014, "mm" : 3, "dd" : 21,
+             "hh" : 0, "ii" :0, "ss" : 0 }
+    }
+]
+```
+
+- tag
+```
+[
+    { "id" : 1, "name" : "街頭民主教室" },...
+]
+```
 
 ## Change Log
 
+#### 2014/04/24
+- Add dataSheetConfig.js to storage the configuration.
+- init transferJSON.js that used to transfer DataSheetJSON to eventsJSON
+
+#### 2014/04/22 
+- Add Test Data
 
 ## Installation
 
 `npm i`
 
 `npm start`
+
+and then open `http://localhost:5000/api/1.0/events`
 
 ## License
 
