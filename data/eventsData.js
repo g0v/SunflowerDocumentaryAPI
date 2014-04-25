@@ -34,6 +34,12 @@ module.exports = [
         "hackpad":"https://318.hackpad.com/--F0W0Fnhkakl",
         "date":{
             "full":"2014-03-21T06:00:00+08:00",
-            "yyyy":2014,"mm":3,"dd":21 }
+            "yyyy":2014,
+            "mm":3,
+            "dd":21,
+            "hh":6,
+            "ii":0,
+            "ss":0
+        }
     }
 ]

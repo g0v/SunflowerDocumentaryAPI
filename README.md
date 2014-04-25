@@ -63,8 +63,8 @@ The Sunflower Documentary [Data API](http://sunflower-documentary-api.herokuapp.
 ## Change Log
 
 #### 2014/04/24
-- Add dataSheetConfig.js to storage the configuration.
-- init transferJSON.js that used to transfer DataSheetJSON to eventsJSON
+- Add `dataSheetConfig.js` to storage the configuration.
+- init `transferJSON.js` that used to transfer DataSheetJSON to eventsJSON
 
 #### 2014/04/22 
 - Add Test Data
