@@ -12,6 +12,8 @@ The Sunflower Documentary [Data API](http://sunflower-documentary-api.herokuapp.
 - Get all tags
 `api/1.0/tags`
 
+- Add api/1.0b for testing.
+
 ## Data format
 
 - Timeline
@@ -22,8 +24,9 @@ The Sunflower Documentary [Data API](http://sunflower-documentary-api.herokuapp.
         "focus": 1,
         "title": "兩岸經貿如何影響民主？",
         "date": {
-             "yyyy" : 2014, "mm" : 3, "dd" : 21,
-             "hh" : 0, "ii" :0, "ss" : 0 }
+            "full" : 2014-03-21T00:00:00+08:00,
+            "yyyy" : 2014, "mm" : 3, "dd" : 21,
+            "hh" : 0, "ii" :0, "ss" : 0 }
     },
 ]
 ```
@@ -47,8 +50,9 @@ The Sunflower Documentary [Data API](http://sunflower-documentary-api.herokuapp.
         ],
         "hackpad": "https://318.hackpad.com/--F0W0Fnhkakl",
         "date": {
-             "yyyy" : 2014, "mm" : 3, "dd" : 21,
-             "hh" : 0, "ii" :0, "ss" : 0 }
+            "full" : 2014-03-21T00:00:00+08:00,
+            "yyyy" : 2014, "mm" : 3, "dd" : 21,
+            "hh" : 0, "ii" :0, "ss" : 0 }
     }
 ]
 ```
@@ -62,7 +66,18 @@ The Sunflower Documentary [Data API](http://sunflower-documentary-api.herokuapp.
 
 ## Change Log
 
-#### 2014/04/24
+#### 2014/04/30
+- Add Event's id.
+- Parse hackpad.
+
+#### 2014/04/29
+- add Event's entry. Parse site,media, tag, hackpad_ch, hackpad_en
+
+#### 2014/04/28
+- add Event's entry. Parse Time, Name.
+- add api/1.0b for testing.
+
+#### 2014/04/24 v1.0
 - Add `dataSheetConfig.js` to storage the configuration.
 - init `transferJSON.js` that used to transfer DataSheetJSON to eventsJSON
 
