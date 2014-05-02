@@ -30,6 +30,10 @@ app.get('/api/' + v + '/timeline', function (req, res) {
     res.send(timelineData);
 });
 
+app.get('/api/' + beta + '/timeline', function (req, res) {
+    res.send(db.getTimelineData());
+});
+
 app.get('/api/' + v + '/tags', function (req, res) {
     res.send(tagsData);
 });
