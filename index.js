@@ -18,27 +18,27 @@ app.all('/*', function(req, res, next) {
     next();
 });
 
-app.get('/api/' + v + '/events', function (req, res) {
+app.get('/api/' + beta + '/events', function (req, res) {
     res.send(eventsData);
 });
 
-app.get('/api/' + beta + '/events', function (req, res) {
+app.get('/api/' + v + '/events', function (req, res) {
     res.send(db.getEventsData());
 });
 
-app.get('/api/' + v + '/timeline', function (req, res) {
+app.get('/api/' + beta + '/timeline', function (req, res) {
     res.send(timelineData);
 });
 
-app.get('/api/' + beta + '/timeline', function (req, res) {
+app.get('/api/' + v + '/timeline', function (req, res) {
     res.send(db.getTimelineData());
 });
 
-app.get('/api/' + v + '/tags', function (req, res) {
+app.get('/api/' + beta + '/tags', function (req, res) {
     res.send(tagsData);
 });
 
-app.get('/api/' + beta + '/tags', function (req, res) {
+app.get('/api/' + v + '/tags', function (req, res) {
     res.send(db.getTagsData());
 });
 
