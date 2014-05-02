@@ -5,12 +5,9 @@ The Sunflower Documentary [Data API](http://sunflower-documentary-api.herokuapp.
 
 ## API Usage
 
-- Get all events
-`api/1.0/events`
-- Get timeline
-`api/1.0/timeline`
-- Get all tags
-`api/1.0/tags`
+- Get all events `api/1.0/events`
+- Get timeline `api/1.0/timeline`
+- Get all tags `api/1.0/tags`
 
 - Add api/1.0b for testing.
 
@@ -66,6 +63,11 @@ The Sunflower Documentary [Data API](http://sunflower-documentary-api.herokuapp.
 
 ## Change Log
 
+#### 2014/05/02 v0.1.0
+- Add timeline list
+- Add tags list
+- Move sample date to api/1.0b
+
 #### 2014/04/30
 - Add Event's id.
 - Parse hackpad.
@@ -77,7 +79,7 @@ The Sunflower Documentary [Data API](http://sunflower-documentary-api.herokuapp.
 - add Event's entry. Parse Time, Name.
 - add api/1.0b for testing.
 
-#### 2014/04/24 v1.0
+#### 2014/04/24 v0.0.1
 - Add `dataSheetConfig.js` to storage the configuration.
 - init `transferJSON.js` that used to transfer DataSheetJSON to eventsJSON
 
