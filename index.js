@@ -23,7 +23,7 @@ app.get('/api/' + v + '/events', function (req, res) {
 });
 
 app.get('/api/' + beta + '/events', function (req, res) {
-    res.send(db.getEvents());
+    res.send(db.getEventsData());
 });
 
 app.get('/api/' + v + '/timeline', function (req, res) {
@@ -32,6 +32,10 @@ app.get('/api/' + v + '/timeline', function (req, res) {
 
 app.get('/api/' + v + '/tags', function (req, res) {
     res.send(tagsData);
+});
+
+app.get('/api/' + beta + '/tags', function (req, res) {
+    res.send(db.getTagsData());
 });
 
 var port = Number(process.env.PORT || 5000);
