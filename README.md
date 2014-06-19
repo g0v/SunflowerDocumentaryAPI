@@ -63,6 +63,10 @@ The Sunflower Documentary [Data API](http://sunflower-documentary-api.herokuapp.
 
 ## Change Log
 
+#### 2014/06/20 v.0.1.1
+- Bugfix: The hackpad's content doesn't match the event. issue #7
+- Refactor db function.
+
 #### 2014/05/02 v0.1.0
 - Add timeline list
 - Add tags list

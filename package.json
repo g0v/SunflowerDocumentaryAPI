@@ -1,7 +1,7 @@
 {
     "name"       : "SunflowerDocumentaryAPI",
     "description": "The Sunflower Documentary Data API",
-    "version"    : "0.1.0",
+    "version"    : "0.1.1",
     "contributor": [
         {
             "name" : "Lee",
