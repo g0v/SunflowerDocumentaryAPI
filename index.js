@@ -1,7 +1,8 @@
-var express        = require('express');
-var app            = express();
+var express  = require('express');
+var app      = express();
 
-var db = require('./lib/transferJSON')
+var dbClient    = require('./lib/db');
+var transClient = require('./lib/transferJSON');
 
 var eventsData = require('./data/eventsData');
 var timelineData = require('./data/timelineData');
@@ -10,7 +11,7 @@ var tagsData = require('./data/tagsData');
 var v = '1.0';
 var beta = '1.0b';
 
-db.init();
+transClient.init(dbClient);
 
 app.all('/*', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -23,7 +24,7 @@ app.get('/api/' + beta + '/events', function (req, res) {
 });
 
 app.get('/api/' + v + '/events', function (req, res) {
-    res.send(db.getEventsData());
+    res.send(dbClient.getEventsData());
 });
 
 app.get('/api/' + beta + '/timeline', function (req, res) {
@@ -31,7 +32,7 @@ app.get('/api/' + beta + '/timeline', function (req, res) {
 });
 
 app.get('/api/' + v + '/timeline', function (req, res) {
-    res.send(db.getTimelineData());
+    res.send(dbClient.getTimelineData());
 });
 
 app.get('/api/' + beta + '/tags', function (req, res) {
@@ -39,7 +40,7 @@ app.get('/api/' + beta + '/tags', function (req, res) {
 });
 
 app.get('/api/' + v + '/tags', function (req, res) {
-    res.send(db.getTagsData());
+    res.send(dbClient.getTagsData());
 });
 
 var port = Number(process.env.PORT || 5000);
