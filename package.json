@@ -20,7 +20,8 @@
     },
     "dependencies": {
         "express"    : "3.4.x",
-        "hackpad"    : "0.0.3"
+        "hackpad"    : "0.0.3",
+        "edit-google-spreadsheet": "0.2.6"
     },
     "repository": [
         {
